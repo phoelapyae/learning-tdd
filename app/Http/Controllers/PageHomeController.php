@@ -10,7 +10,7 @@ class PageHomeController extends Controller
     {
         $courses = Course::query()
         ->whereNotNull('released_at')
-        ->orderBy('released_at', 'desc')
+        ->orderByDesc('released_at')
         ->get();
 
         return view('home', [
