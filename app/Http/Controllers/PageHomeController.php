@@ -13,7 +13,7 @@ class PageHomeController extends Controller
         ->orderByDesc('released_at')
         ->get();
 
-        return view('home', [
+        return view('pages.home', [
             'courses' => $courses
         ]);
     }
